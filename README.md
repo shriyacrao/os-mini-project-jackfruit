@@ -115,83 +115,83 @@ sudo ./engine shutdown
 
 ### 1. Dependency Setup
 
-![Dependency Setup](screenshots/01_setup_dependencies.jpg)
+![Dependency Setup](screenshots/01_setup_dependencies.jpeg)
 
 ### 2. Build Output
 
-![Build Output](screenshots/02_make_build.jpg)
+![Build Output](screenshots/02_make_build.jpeg)
 
 ### 3. Module Loaded
 
-![Module Loaded](screenshots/03_module_loaded.jpg)
+![Module Loaded](screenshots/03_module_loaded.jpeg)
 
 ### 4. Supervisor Started
 
-![Supervisor Started](screenshots/04_supervisor_started.jpg)
+![Supervisor Started](screenshots/04_supervisor_started.jpeg)
 
 ### 5. Container Started
 
-![Container Started](screenshots/05_container_started.jpg)
+![Container Started](screenshots/05_container_started.jpeg)
 
 ### 6. Metadata Tracking
 
-![PS Metadata](screenshots/06_ps_metadata.jpg)
+![PS Metadata](screenshots/06_ps_metadata.jpeg)
 
 The `ps` command shows each tracked container along with its state, exit code, memory limits, and log file path.
 
 ### 7. Log Output
 
-![Log Output](screenshots/07_log_output.jpg)
+![Log Output](screenshots/07_log_output.jpeg)
 
 ### 8. Log File View
 
-![Log File View](screenshots/08_log_file_view.jpg)
+![Log File View](screenshots/08_log_file_view.jpeg)
 
 The supervisor captures container output through pipes and stores it in per-container log files.
 
 ### 9. Soft Limit Warning
 
-![Soft Limit Warning](screenshots/09_soft_limit_warning.jpg)
+![Soft Limit Warning](screenshots/09_soft_limit_warning.jpeg)
 
 When a container crosses the soft RSS limit, the kernel module logs a warning without killing the process.
 
 ### 10. Hard Limit Enforcement
 
-![Hard Limit Kill](screenshots/10_hard_limit_kill.jpg)
+![Hard Limit Kill](screenshots/10_hard_limit_kill.jpeg)
 
 ### 11. Killed State in Metadata
 
-![Hard Limit Killed State](screenshots/11_hard_limit_killed_state.jpg)
+![Hard Limit Killed State](screenshots/11_hard_limit_killed_state.jpeg)
 
 When a container exceeds the hard RSS limit, the kernel module sends `SIGKILL`, and the supervisor updates its metadata accordingly.
 
 ### 12. Multiple Containers Running
 
-![Two Containers Running](screenshots/12_two_containers_running.jpg)
+![Two Containers Running](screenshots/12_two_containers_running.jpeg)
 
 This demonstrates that the supervisor can manage more than one container at the same time.
 
 ### 13. CLI and IPC
 
-![CLI IPC](screenshots/13_cli_ipc1.jpg)
+![CLI IPC](screenshots/13_cli_ipc1.jpeg)
 
 The CLI sends commands to the supervisor over a UNIX domain socket located at `/tmp/engine.sock`.
 
 ### 14. Scheduling Experiment
 
-![Scheduling Experiment](screenshots/14_scheduling_experiment.jpg)
+![Scheduling Experiment](screenshots/14_scheduling_experiment.jpeg)
 
 The scheduling test compares CPU-bound workloads using different `nice` values.
 
 ### 15. No Zombie Processes
 
-![No Zombies](screenshots/15_no_zombies.jpg)
+![No Zombies](screenshots/15_no_zombies.jpeg)
 
 After shutdown, exited child processes are reaped correctly and no zombie processes remain.
 
 ### 16. Clean Shutdown
 
-![Shutdown Complete](screenshots/16_shutdown_complete.jpg)
+![Shutdown Complete](screenshots/16_shutdown_complete.jpeg)
 
 This confirms orderly shutdown of containers, logging threads, and the kernel monitor.
 
