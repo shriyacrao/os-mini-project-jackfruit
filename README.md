@@ -238,7 +238,7 @@ Memory enforcement in kernel space is more dependable because hard-limit termina
 ## File Structure
 
 ```text
-os_jackfruit/
+os-mini-project-jackfruit/
 ├── engine.c
 ├── monitor.c
 ├── monitor_ioctl.h
@@ -264,3 +264,4 @@ make clean
 Add your repository link here:
 
 [GitHub Repository](https://github.com/shriyacrao/os-mini-project-jackfruit)
+
